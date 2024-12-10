@@ -1,4 +1,4 @@
-# Payload Website Template
+# Payload Website Template（硬性要求 Node 版本 20 以上）
 
 > 在官方 Website 项目上做的 Demo，添加了自定义 dashboard 页面。Poyload 核心原理：通过控制台配置属性，在前端组件中应用。
 
