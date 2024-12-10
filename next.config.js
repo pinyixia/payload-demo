@@ -20,6 +20,30 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
+  // webpack: (config, options) => {
+  //   config.module.rules.push({
+  //     test: /\.less$/,
+  //     use: [
+  //       {
+  //         loader: 'style-loader', // 将 CSS 插入到 DOM 中
+  //       },
+  //       {
+  //         loader: 'css-loader', // 解析 CSS
+  //         options: { importLoaders: 1 },
+  //       },
+  //       {
+  //         loader: 'less-loader', // 编译 Less 文件为 CSS
+  //         options: {
+  //           lessOptions: {
+  //             javascriptEnabled: true, // 如果使用 Ant Design，需要开启
+  //           },
+  //         },
+  //       },
+  //     ]
+  //   })
+ 
+  //   return config
+  // },
 }
 
 export default withPayload(nextConfig)

@@ -8,6 +8,10 @@ import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { ContentBlock } from '@/blocks/Content/Component'
 import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
+import { DashBoardHead } from '@/dcopComponents/DashboardHeader/Component' 
+import { DashBoardDetail } from '@/dcopComponents/DashBoardDetail/Component' 
+
+import { Space } from 'antd'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -15,6 +19,8 @@ const blockComponents = {
   cta: CallToActionBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
+  dbh: DashBoardHead,
+  dbd: DashBoardDetail
 }
 
 export const RenderBlocks: React.FC<{
@@ -35,7 +41,7 @@ export const RenderBlocks: React.FC<{
 
             if (Block) {
               return (
-                <div className="my-16" key={index}>
+                <div key={index}>
                   {/* @ts-expect-error */}
                   <Block {...block} />
                 </div>
